@@ -364,7 +364,21 @@
 const calculationData = { /* بيانات الحساب */ };
 localStorage.setItem('lastCalculation', JSON.stringify(calculationData));    
 </script>
-
+<script>
+// تشغيل زر التثبيت
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  const installButton = document.createElement('button');
+  installButton.textContent = 'ثبّت التطبيق';
+  installButton.style = `...أنماط جذابة...`;
+  document.body.appendChild(installButton);
+  
+  installButton.addEventListener('click', () => {
+    e.prompt();
+    installButton.remove();
+  });
+});
+</script>
     <script>
   // ======= PWA Activation ======= 
   if ('serviceWorker' in navigator) {
