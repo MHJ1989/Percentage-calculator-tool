@@ -9,10 +9,19 @@ const urlsToCache = [
 ];
 
 // تثبيت الملفات الأساسية
+// sw.js
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open('v2').then(cache => { // غيرت اسم الكاش
+      return cache.addAll([
+        '/',
+        '/index.html',
+        '/manifest.json',
+        '/icons/icon-144.png',
+        '/icons/icon-192.png',
+        '/icons/icon-512.png'
+      ]);
+    })
   );
 });
 

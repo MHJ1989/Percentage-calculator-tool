@@ -1,22 +1,39 @@
 {
-  "name": "حاسبة النسب المئوية | MHJ",
-  "short_name": "نسب%",
+  "name": "حاسبة النسب المئوية",
+  "short_name": "حاسبة النسب",
   "start_url": ".",
-  "scope": "/", 
   "display": "standalone",
-  "background_color": "#f0f9ff",
+  "background_color": "#f5f7fa",
   "theme_color": "#3498db",
+  "description": "أداة متكاملة لحساب النسب المئوية",
   "icons": [
     {
-      "src": "./icon/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "./icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./screenshots/mobile.png",
+      "sizes": "375x667",
+      "type": "image/png"
+    },
+    {
+      "src": "./screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ]
 }
